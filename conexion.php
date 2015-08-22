@@ -48,3 +48,8 @@ public function consultar($insentencia) {
 
     
 }
+/**
+ * Description of conexion
+ * se crea u n comentario 
+ * @author robert mendoza
+ */
