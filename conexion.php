@@ -14,10 +14,10 @@
 class conexion {
     //put your code here
     
-    private $host = "127.0.0.1";
-    private $usuario = "root";
-    private $pass = "password";
-    private $database = "bd";
+    private $host = "localhost";
+    private $usuario = "adsi";
+    private $pass = "adsi750669";
+    private $database = "usuarios";
     private $port = "3306";
     private $conex;
 
