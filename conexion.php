@@ -15,9 +15,9 @@ class conexion {
     //put your code here
     
     private $host = "127.0.0.1";
-    private $usuario = "adsi";
-    private $pass = "adsi750669";
-    private $database = "materias";
+    private $usuario = "root";
+    private $pass = "password";
+    private $database = "bd";
     private $port = "3306";
     private $conex;
 
