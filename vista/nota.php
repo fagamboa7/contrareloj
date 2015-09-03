@@ -11,7 +11,7 @@ and open the template in the editor.
     </head>
     <body>
         
-         <form action="manejanota.php" method="POST">
+         <form action="../control/manejanota.php" method="POST">
              Estudiantes: 
              <?php
                  echo '<select name="idestudiante">';

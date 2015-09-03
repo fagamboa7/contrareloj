@@ -17,7 +17,7 @@ class conexion {
     private $host = "localhost";
     private $usuario = "adsi";
     private $pass = "adsi750669";
-    private $database = "usuarios";
+    private $database = "materias";
     private $port = "3306";
     private $conex;
 

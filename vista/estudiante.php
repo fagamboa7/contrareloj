@@ -10,8 +10,23 @@ and open the template in the editor.
         <title></title>
     </head>
     <body>
+        
+        <?php
+        session_start();
+        
+        if ($_SESSION['rol']!= "estudiante") {
+            
+            header('Location: ../vista/inicio.php');            
+            
+        }
+        session_id($_SESSION['nombre']);
+        echo 'Bienvenido estudiante: '.$_SESSION['nombre']."<br>";
+        $idsesion = session_id();
+        echo $idsesion." es su variable de sesión";
+        
+        ?>
        
-        <form action="manejaestudiante.php" method="POST">
+        <form action="../control/manejaestudiante.php" method="POST">
             
             <input type="number" name="idestudiante" placeholder="ingrese código"><br>
             <input type="text" name="nombres" placeholder="ingrese nombres"><br>

@@ -17,7 +17,7 @@ class conexionFull {
     private $host = "localhost";
     private $usuario = "adsi";
     private $pass = "adsi750669";
-    private $dbname = "usuarios";
+    private $dbname = "materias";
     private $puerto = "3306";
     private $conex;
 
