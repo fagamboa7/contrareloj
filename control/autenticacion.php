@@ -38,6 +38,10 @@ $rol = $arreglo[0][1];
 $_SESSION['nombre'] = $nombreusuario;
 $_SESSION['rol'] = $rol;
 
+$_SESSION['ultimoAcceso'] = time();
+
+
+
 if ($_SESSION['rol']== "estudiante") {
     header('Location: ../vista/estudiante.php');
 }

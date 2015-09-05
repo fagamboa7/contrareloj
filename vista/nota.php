@@ -10,12 +10,16 @@ and open the template in the editor.
         <title></title>
     </head>
     <body>
+        <?php
+        include '../control/verificaNotas.php';
         
+        ?>
          <form action="../control/manejanota.php" method="POST">
              Estudiantes: 
              <?php
                  echo '<select name="idestudiante">';
-                 require_once 'conexion.php';
+                 require_once '../persistencia/conexion.php';
+                 require_once '../persistencia/conexionfull.php';
                  $objconexion = new conexion();
                  $arreglo = $objconexion->consultar("select estudiante.idestudiante, estudiante.nombres, estudiante.estudiantecol from `materias`.`estudiante`;");
                  $numfilas = count($arreglo);
@@ -27,7 +31,8 @@ and open the template in the editor.
              Materias: 
             <?php
                  echo '<select name="idmateria">';
-                 require_once 'conexion.php';
+                  require_once '../persistencia/conexion.php';
+                 require_once '../persistencia/conexionfull.php';
                  $objconexion = new conexion();
                  $arreglo = $objconexion->consultar("select materia.idmateria, materia.materiacol from `materias`.`materia`;");
                  $numfilas = count($arreglo);
@@ -41,6 +46,10 @@ and open the template in the editor.
              <input type="submit" name="accion" value="Consultar">
             
         </form>
-        
+         <form action="../control/cerrarSesion.php" method="POST">
+            
+            <input type="submit" name="accion" value="Cerrar sesión">
+            
+        </form>
     </body>
 </html>

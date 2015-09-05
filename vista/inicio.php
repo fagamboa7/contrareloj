@@ -10,6 +10,7 @@ and open the template in the editor.
         <title></title>
     </head>
     <body>
+               
         <form action="../control/autenticacion.php" method="POST">
             
             <input type="number" name="idusuario" placeholder="ingrese id"><br>

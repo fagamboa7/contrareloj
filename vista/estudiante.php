@@ -12,17 +12,7 @@ and open the template in the editor.
     <body>
         
         <?php
-        session_start();
-        
-        if ($_SESSION['rol']!= "estudiante") {
-            
-            header('Location: ../vista/inicio.php');            
-            
-        }
-        session_id($_SESSION['nombre']);
-        echo 'Bienvenido estudiante: '.$_SESSION['nombre']."<br>";
-        $idsesion = session_id();
-        echo $idsesion." es su variable de sesión";
+        include '../control/verificaEstudiante.php';
         
         ?>
        
@@ -34,6 +24,13 @@ and open the template in the editor.
             <input type="submit" name="accion" value="Guardar">
             <input type="submit" name="accion" value="Consultar">
         </form>
+        <br><br>
+        <form action="../control/cerrarSesion.php" method="POST">
+            
+            <input type="submit" name="accion" value="Cerrar sesión">
+            
+        </form>
+            
         
     </body>
 </html>

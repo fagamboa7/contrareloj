@@ -6,7 +6,8 @@
  * and open the template in the editor.
  */
 
-require_once 'conexion.php';
+require_once '../persistencia/conexion.php';
+require_once '../persistencia/conexionfull.php';
 
 $idmateria = $_POST['idmateria'];
 $nombremateria = $_POST['nombremateria'];

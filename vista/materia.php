@@ -10,7 +10,10 @@ and open the template in the editor.
         <title></title>
     </head>
     <body>
-       
+       <?php
+        include '../control/verificainstructor.php';
+        
+        ?>
          <form action="manejamateria.php" method="POST">
             
             <input type="number" name="idmateria" placeholder="ingrese código materia"><br>
@@ -19,6 +22,10 @@ and open the template in the editor.
              <input type="submit" name="accion" value="Consultar">
             
         </form>
-        
+         <form action="../control/cerrarSesion.php" method="POST">
+            
+            <input type="submit" name="accion" value="Cerrar sesión">
+            
+        </form>
     </body>
 </html>

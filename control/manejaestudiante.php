@@ -6,8 +6,8 @@
  * and open the template in the editor.
  */
 
-require_once 'conexion.php';
-require_once 'conexionfull.php';
+require_once '../persistencia/conexion.php';
+require_once '../persistencia/conexionfull.php';
 
 $idestudiante = $_POST['idestudiante'];
 $nombres = $_POST['nombres'];
@@ -18,8 +18,6 @@ $objconexion = new conexionFull();
 if($accion=="Guardar"){
 $sentenciainsert = "INSERT INTO `materias`.`estudiante`(`idestudiante`,`nombres`,`estudiantecol`)
 VALUES('".$idestudiante."','".$nombres."','".$apellidos."');";
-
-
 $res = $objconexion->ejecutar($sentenciainsert);
 echo "Se ingreso correctamente ".$res." registro en la base de datos";    
 }
